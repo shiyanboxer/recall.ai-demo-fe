@@ -1,12 +1,21 @@
 import * as React from 'react';
+import { useContext } from 'react';
 import { Button, Input, Box, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { MeetingIdContext } from '../context/MeetingIdContext';
 
-export default function Home() {
+export default function Meeting() {
     const [botName, setBotName] = React.useState('');
     const [meetingLink, setMeetingLink] = React.useState('');
     const [isLinkValid, setIsLinkValid] = React.useState(true);
+    const context = useContext(MeetingIdContext);
+
+    if (!context) {
+        throw new Error('MeetingLinkContext is undefined, please verify the Provider');
+    }
+    const { meetingId, setMeetingId } = context;
+
     const router = useRouter();
 
     const connectToMeeting = async (botName: string, meetingLink: string) => {
@@ -23,6 +32,7 @@ export default function Home() {
 
             const data = response.data;
             console.log('API response data:', data);
+            setMeetingId(data.id);
             router.push('/connect');
         } catch (error) {
             console.error('API call error:', error);
@@ -39,7 +49,7 @@ export default function Home() {
     };
 
     const validateURL = (url: string) => {
-        const urlPattern = /^(http[s]?:\/\/)?(www\.)?([a-zA-Z0-9-]+)\.([a-z]{2,})([/\w\.-]*)*\/?$/;
+        const urlPattern = /^(http[s]?:\/\/)?(www\.)?([a-zA-Z0-9-]+)\.([a-z]{2,})([/\w\.-]*)*\/?/;
         return urlPattern.test(url);
     };
 
@@ -60,7 +70,9 @@ export default function Home() {
             <Input
                 placeholder="Meeting link"
                 value={meetingLink}
-                onChange={(e) => setMeetingLink(e.target.value)}
+                onChange={(e) => {
+                    setMeetingLink(e.target.value);
+                }}
                 error={!isLinkValid}
                 sx={{
                     '& input': {
@@ -75,10 +87,7 @@ export default function Home() {
                     Invalid URL format. Please enter a valid URL.
                 </Typography>
             )}
-            <Button
-                variant='contained'
-                onClick={handleConnectClick}
-            >
+            <Button variant='contained' onClick={handleConnectClick}>
                 Connect
             </Button>
         </Box >
