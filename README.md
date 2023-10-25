@@ -1,5 +1,5 @@
 <!-- ABOUT THE PROJECT -->
-*View the frontend repository [here](https://github.com/shiyanboxer/recall.ai-demo-be)*
+*View the backend repository [here](https://github.com/shiyanboxer/recall.ai-demo-be)*
 
 # About The Project
 This is a simple web application that showcases the [Recall.ai](https://www.recall.ai) in action. The project was developed using Python, Flask, React, Typescript, and the Recall.ai API. Users can input a bot name and a Google or Zoom meeting link, enabling the Recall.ai bot to join the meeting. Additionally, users have the capability to disconnect the meeting bot and pause and resume recordings.
