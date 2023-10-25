@@ -17,7 +17,7 @@ export default function Footer() {
       </Typography>
       <Typography variant="body1" color="text.secondary" align="center">
         {'View this project on '}
-        <MuiLink color="inherit" href="https://github.com/shiyanboxer/recall.ai-demo">
+        <MuiLink color="inherit" href="https://github.com/shiyanboxer/recall.ai-demo-be">
           GitHub.
         </MuiLink>{' '}
       </Typography>
