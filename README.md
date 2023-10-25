@@ -40,7 +40,7 @@ The project is divided into two separate repositories: the frontend repository a
 2. **Install the Project Dependencies**
 
    ```bash
-   npm run dev
+   npm install
    ```
    
 3. **Run the Server**
@@ -48,9 +48,14 @@ The project is divided into two separate repositories: the frontend repository a
    Now you’re ready to run the server, run the following command in your terminal
 
    ```bash
-      cd src
-      python app.py
+   npm run dev
    ```
 4. **Open Localhost**
 
-  Open http://localhost:3000/ to see the project
+   Open http://localhost:3000/ to see the project
+
+## References
+- Recall documentation: https://recallai.readme.io/reference/recall-overview
+
+## Contact
+If you have any questions, please reach out to shiyanboxer@gmail.com. 
