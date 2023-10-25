@@ -55,7 +55,7 @@ The project is divided into two separate repositories: the frontend repository a
    Open http://localhost:3000/ to see the project
 
 ## References
-- Recall documentation: https://recallai.readme.io/reference/recall-overview
+Recall documentation: https://recallai.readme.io/reference/recall-overview
 
 ## Contact
 If you have any questions, please reach out to shiyanboxer@gmail.com. 
