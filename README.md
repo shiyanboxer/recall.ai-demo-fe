@@ -48,6 +48,7 @@ The project is divided into two separate repositories: the frontend repository a
    Now you’re ready to run the server, run the following command in your terminal
 
    ```bash
+   cd src
    npm run dev
    ```
 4. **Open Localhost**
