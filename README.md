@@ -103,6 +103,7 @@ Frontend Project Structure:
 
 6. After clicking "Connect," you'll be directed to the Connected meeting page. Here, you can manage the bot and view the real-time meeting transcript.
 
+![Connect meeting](https://github.com/shiyanboxer/recall.ai-demo-fe/blob/main/img/ConnectScreen.png)
 
 ## References
 Recall documentation: https://recallai.readme.io/reference/recall-overview
