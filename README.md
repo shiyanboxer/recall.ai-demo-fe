@@ -29,7 +29,7 @@ The project is divided into two separate repositories: the frontend repository a
 * **npm** - Installation guide found [here](https://www.npmjs.com/).
 
 <!-- QUICKSTART -->
-## QuickstartClone the [repository](https://github.com/mui/material-ui):
+## Quickstart
 
 1. **Clone the Repository**
 
